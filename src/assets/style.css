@@ -1,0 +1,92 @@
+html * {
+	    box-sizing: border-box;
+	  }
+	  
+	  body {
+	    padding: 0;
+	    margin: 0;
+	    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        height: 550px;
+        background-color: white;
+        background-image: linear-gradient(red, white, navy);
+
+      }
+      
+     
+	  
+	  .ScoreBoard .teamStats {
+	    flex: 1;
+	  }
+	  
+	  .Game {
+	    text-align: center;
+	  }
+	  
+	  .Team {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: space-between;
+        height: 30rem;
+        color:black;
+        text-shadow: 1px 1px 0 whitesmoke;
+       
+	  }
+	  
+	  .Team .identity {
+	    height: 15rem;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+	  }
+	  
+	  .Team img {
+        max-width: 200px;
+        display: block;
+	    margin-top: 1rem;
+	    width: 100%;
+	    padding: 0.5rem;
+	    background-color:black;
+        border: 0;
+        border-radius: 25%;
+	    font-family: Impact;
+	    text-transform: uppercase;
+	    font-size: 1.2em;
+	    box-shadow: 2px 2px 0 red;
+       
+	  }
+	  
+	  .stats {
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	  }
+	  
+	  .versus {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	  }
+	  
+	  .versus h1 {
+	    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	    font-size: 800%;
+	    color:navy;
+        text-shadow: 2px 2px 0 red;
+	  }
+	  
+	  button {
+	    display: block;
+	    margin-top: 1rem;
+	    width: 100%;
+	    padding: 0.5rem;
+	    background-color: whitesmoke;
+        border: 0;
+        border-radius: 25%;
+	    font-family: Impact;
+	    text-transform: uppercase;
+	    font-size: 1.2em;
+	    box-shadow: 2px 2px 0 black;
+	  }
+
