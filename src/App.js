@@ -12,7 +12,7 @@ function App() {
     logoSrc: Pic1
   }
   const Lynx = {
-    name: 'Bad Cat',
+    name: 'Bad Cats',
     logoSrc: Pic3
   }
   const DragonWarriors = {

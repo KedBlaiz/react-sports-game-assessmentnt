@@ -8,28 +8,15 @@ class Team extends React.Component {
             shots: 0,
             score: 0
         }
-        this.shotSound = new Audio('FOOTBALLKICK.mp3')
-        this.scoreSound = new Audio('cheers.mps')
+       
     }
-    shotHandler = () => {
-        let score = this.state.score
-        this.scoreSound.play()
-
-        if (Math.random() > 0.5) {
-            score += 1
-            this.scoreSound.play()
-        }
-        this.setState((state, props) => ({
-            shots: state.shots + 1,
-            score
-        }))
-    }
+    
 
 render () {
     let shotPercentageDiv
-    let shotPercentage = []
-    if (this.state.shots) {
-        shotPercentage = Math.round((this.state.shots / this.state.score) * 100)
+    let shotPercentage = 0
+    if (this.props.stats.shots) {
+        shotPercentage = Math.round((this.props.stats.shots / this.props.stats.score) * 100)
 
         shotPercentageDiv = (
             <div>
@@ -40,16 +27,17 @@ render () {
     }
     return (
         <div className='Team'>
-            <h1>{this.props.name}</h1>
+            <h1>{this.props.teamName}</h1>
 
             <div className='logo'>
-                <img src={this.props.logo} alt={this.props.name} />
+                <img src={this.props.teamLogo} alt={this.props.teamName} />
             </div>
+            <br />
 
             <div>
                 
                     <strong>
-                        <em>SHOTS : </em>{this.state.shots}
+                        <em>SHOTS : </em>{this.props.stats.shots}
                     </strong>
                
                
@@ -60,7 +48,7 @@ render () {
             <div>
                 
                     <strong>
-                        <em>SCORE : </em>{this.state.score}
+                        <em>SCORE : </em>{this.props.stats.score}
                     </strong>
                
                
@@ -70,9 +58,12 @@ render () {
 
             {shotPercentageDiv}
 
-            <button onClick={this.shotHandler}><em>SHOOT!</em></button>
+            <button onClick={this.props.shotHandler}><em>SHOOT!</em></button>
         </div>
+
+        
     )
+    
 }
 }
 

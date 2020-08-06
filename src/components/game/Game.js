@@ -30,7 +30,7 @@ class Game extends Component {
     }
 
     shoot = (team) => {
-        const teamStatsKey = '${team}TeamStats'
+        const teamStatsKey = `${team}TeamStats`
         let score = this.state[teamStatsKey].score
         this.shotSound.play()
 
@@ -45,7 +45,7 @@ class Game extends Component {
         this.setState((state, props) => ({
             [teamStatsKey]: {
                 shots: state[teamStatsKey].shots + 1, 
-                score: score,
+                score,
             }
         }))
     }
@@ -68,6 +68,10 @@ class Game extends Component {
     render() {
         return (
             <div className='Game'>
+                <br />
+                <br />
+                <br />
+                <br />
                 <h1>Welcome to {this.props.venue}</h1>
                 <Scoreboard
                 homeTeamStats={this.state.homeTeamStats}
@@ -77,22 +81,22 @@ class Game extends Component {
                         <h2>V/S</h2>
                     </div>
                 <div className='stats'>
-                    <Team teamName={this.props.homeTeam}
-                    teamLogo={this.props.homeTeam}
+                    <Team teamName={this.props.homeTeam.name}
+                    teamLogo={this.props.homeTeam.logoSrc}
                     stats={this.state.homeTeamStats}
-                    shotHandler={() => this.shotSound('home')}
+                    shotHandler={() => this.shoot('home')}
                     />
 
                     <br />
-                   
-                    <br />
-
+                    
                     <button className='resetButton' onClick={this.resetGame}>Reset Game</button>
-
-                    <Team teamName={this.props.visitingTeam}
-                    teamLogo={this.props.visitingTeam}
+                    <br />
+                    <br />
+                    <br />
+                    <Team teamName={this.props.visitingTeam.name}
+                    teamLogo={this.props.visitingTeam.logoSrc}
                     stats={this.state.visitingTeamStats}
-                    shotHandler={() => this.shotSound('visiting')}
+                    shotHandler={() => this.shoot('visiting')}
                     />
 
                 </div>

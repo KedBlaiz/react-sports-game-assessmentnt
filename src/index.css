@@ -1,21 +1,22 @@
 * {
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
   padding: 0;
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 855px;
-    background-color: white;
-    background-image: linear-gradient(red, white, navy);
+  height: 800px;
+  position: relative;
+  background-image: linear-gradient(red, white, navy);
 
   }
-  
  
 
 .ScoreBoard .teamStats {
   flex: 1;
+  position: relative;
 }
 
 .Game {
@@ -27,33 +28,29 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-    height: 30rem;
-    color:black;
-    text-shadow: 1px 1px 0 whitesmoke;
-   
+  height: -15rem;
+  color:navy;
+  text-shadow: 1px 1px 0 whitesmoke;
+  margin-top: -15rem;
+  position: relative;
 }
 
-.Team .identity {
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .Team img {
-    max-width: 200px;
-    display: block;
+  max-width: 200px;
+  display: block;
   margin-top: 1rem;
   width: 100%;
   padding: 0.5rem;
-  background-color:black;
-    border: 0;
-    border-radius: 25%;
-  font-family: Impact;
+  border: 0;
+  border-radius: 25%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-transform: uppercase;
   font-size: 1.2em;
+  background-color: navy;
   box-shadow: 2px 2px 0 red;
+  position: relative;
    
 }
 
@@ -69,23 +66,24 @@ body {
   align-items: center;
 }
 
-.versus h1 {
+.versus h2 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 800%;
+  font-size: 300%;
   color:navy;
     text-shadow: 2px 2px 0 red;
 }
 
 button {
   display: block;
-  margin-top: 1rem;
-  width: 100%;
+  margin-top: auto;
+  width: 50%;
   padding: 0.5rem;
-  background-color: whitesmoke;
-    border: 100%;
-    border-radius: 20%;
+  background-color: red;
+  border: 100%;
+  border-radius: 20%;
   font-family: Impact;
   text-transform: uppercase;
   font-size: 1.2em;
   box-shadow: 2px 2px 0 black;
+  position: relative;
 }
